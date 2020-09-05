@@ -40,23 +40,23 @@ class Card:
         Args:
             suit (int): The suit of the playing card
             value (int): The value of the playing card
-
-
         """
-
         self._value = card_values[value]
         self._suit = Suits[suit]
 
     @property
     def suit(self):
+        """str: The suit of the card"""
         return self._suit
 
     def value(self):
+        """str: the value of the card"""
         return self._value
 
     def __str__(self):
         """str: gives a description of the card"""
         return self._value + ' of ' + self._suit
+
 
 def test_playing_card():
     test_card = Card(0, 0)
